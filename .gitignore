@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 .idea
 image.png
+img_create.py
+simulation.py
