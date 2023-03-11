@@ -1,6 +1,15 @@
 import cv2
+import time
 
-array = cv2.imread("image.png")
+video = cv2.VideoCapture(0)
+time.sleep(1)
 
-print(array.shape)
-print(array)
+while True:
+    check, frame = video.read()
+    cv2.imshow("My Video", frame)
+
+    key = cv2.waitKey(1)
+    if key == ord("q"):
+        break
+
+video.release()
